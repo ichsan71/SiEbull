@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="bullypedia">Bullypedia</string>
+    <string name="profile">Profile</string>
+    <string name="askbully">Askbully</string>
+    <string name="tuliskan_ceritamu_disini">Tuliskan ceritamu disini...</string>
+    <string name="kirim">Kirim</string>
+    <string name="hallobully">Hallobully</string>
+</resources>
