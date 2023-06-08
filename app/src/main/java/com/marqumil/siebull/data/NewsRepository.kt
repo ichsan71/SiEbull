@@ -18,7 +18,7 @@ class NewsRepository private constructor(
     fun getHeadlineNews(): LiveData<Result<List<NewsEntity>>> = liveData {
         emit(Result.Loading)
         try {
-            val response = apiService.getNews("613b56eec5314e60a57e3e033c454fbb")
+            val response = apiService.getNews("62f17606338c4bfa8347278b4779b67f")
             val articles = response.articles
             val newsList = articles.map { article ->
                 val isBookmarked = newsDao.isNewsBookmarked(article.title)
