@@ -11,4 +11,5 @@
     <color name="bg_ebull">#7adfbb</color>
     <color name="bg_ebull_text">#A6ECE0</color>
     <color name="btn_ebull">#4E6E58</color>
+    <color name="btn_card_text">#C9C8C8</color>
 </resources>

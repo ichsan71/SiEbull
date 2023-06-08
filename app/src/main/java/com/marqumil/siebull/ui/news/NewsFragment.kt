@@ -41,8 +41,10 @@ class NewsFragment : Fragment() {
         val newsAdapter = NewsAdapter { news ->
             if (news.isBookmarked) {
                 viewModel.deleteNews(news)
+                Log.d("NewsFragment", "Success delete ${news.title}")
             } else {
                 viewModel.saveNews(news)
+                Log.d("NewsFragment", "Success save ${news.title}")
             }
         }
 
@@ -69,6 +71,7 @@ class NewsFragment : Fragment() {
             viewModel.getBookmarkedNews().observe(viewLifecycleOwner) { bookmarkedNews ->
                 binding?.progressBar?.visibility = View.GONE
                 newsAdapter.submitList(bookmarkedNews)
+                Log.d("NewsFragment", "Success bookmarked ${bookmarkedNews.size}")
             }
         }
 

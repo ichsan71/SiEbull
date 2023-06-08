@@ -58,13 +58,14 @@ class HomeActivity : AppCompatActivity() {
                     is Result.Success -> {
                         binding.progressBar.visibility = View.GONE
                         newsAdapter.submitList(result.data)
-                        Log.d("NewsFragment", "Success ${result.data.size}")
+                        Log.d("Home Activity", "Success ${result.data.size}")
+                        Log.d("Home Activity", "Success ${result.data[0].title}")
                     }
                 }
             }
         }
 
-        with(binding.rvBookmark) {
+        binding.rvBookmark.apply {
             layoutManager = LinearLayoutManager(context)
             setHasFixedSize(true)
             adapter = newsAdapter
